@@ -15,9 +15,29 @@ export default function ContactForm() {
     setStatus('sent');
   }
 
+  if (status === 'error') {
+    return (
+      <div className="bg-red-50 border border-red-200 rounded-lg p-8 text-center">
+        <svg className="w-12 h-12 text-red-500 mx-auto mb-3" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+        </svg>
+        <h3 className="text-lg font-semibold text-red-900">Er ging iets mis</h3>
+        <p className="text-red-700 mt-1 mb-4">
+          Uw bericht kon niet worden verzonden. Probeer het opnieuw of bel ons direct.
+        </p>
+        <button
+          onClick={() => setStatus('idle')}
+          className="text-sm font-semibold text-red-800 hover:text-red-900 underline"
+        >
+          Opnieuw proberen
+        </button>
+      </div>
+    );
+  }
+
   if (status === 'sent') {
     return (
-      <div className="bg-green-50 border border-green-200 rounded-2xl p-8 text-center">
+      <div className="bg-green-50 border border-green-200 rounded-lg p-8 text-center">
         <svg className="w-12 h-12 text-green-600 mx-auto mb-3" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
@@ -41,7 +61,7 @@ export default function ContactForm() {
             name="name"
             type="text"
             required
-            className="w-full rounded-xl border border-slate-300 px-4 py-2.5 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition"
+            className="w-full rounded-xl border border-slate-300 px-4 py-2.5 text-sm focus:border-brand-600 focus:ring-2 focus:ring-brand-600/20 outline-none transition"
             placeholder="Uw naam"
           />
         </div>
@@ -53,7 +73,7 @@ export default function ContactForm() {
             id="phone"
             name="phone"
             type="tel"
-            className="w-full rounded-xl border border-slate-300 px-4 py-2.5 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition"
+            className="w-full rounded-xl border border-slate-300 px-4 py-2.5 text-sm focus:border-brand-600 focus:ring-2 focus:ring-brand-600/20 outline-none transition"
             placeholder="Uw telefoonnummer"
           />
         </div>
@@ -68,7 +88,7 @@ export default function ContactForm() {
           name="email"
           type="email"
           required
-          className="w-full rounded-xl border border-slate-300 px-4 py-2.5 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition"
+          className="w-full rounded-xl border border-slate-300 px-4 py-2.5 text-sm focus:border-brand-600 focus:ring-2 focus:ring-brand-600/20 outline-none transition"
           placeholder="uw@email.nl"
         />
       </div>
@@ -80,7 +100,7 @@ export default function ContactForm() {
         <select
           id="subject"
           name="subject"
-          className="w-full rounded-xl border border-slate-300 px-4 py-2.5 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition bg-white"
+          className="w-full rounded-xl border border-slate-300 px-4 py-2.5 text-sm focus:border-brand-600 focus:ring-2 focus:ring-brand-600/20 outline-none transition bg-white"
         >
           <option value="">Selecteer een onderwerp</option>
           <option value="offerte">Offerte aanvragen</option>
@@ -102,7 +122,7 @@ export default function ContactForm() {
           name="message"
           required
           rows={5}
-          className="w-full rounded-xl border border-slate-300 px-4 py-2.5 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition resize-y"
+          className="w-full rounded-xl border border-slate-300 px-4 py-2.5 text-sm focus:border-brand-600 focus:ring-2 focus:ring-brand-600/20 outline-none transition resize-y"
           placeholder="Vertel ons over uw project of stel uw vraag..."
         />
       </div>
@@ -110,7 +130,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === 'sending'}
-        className="w-full sm:w-auto bg-blue-800 text-white px-8 py-3 rounded-xl font-semibold hover:bg-blue-900 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+        className="w-full sm:w-auto bg-brand-800 text-white px-8 py-3 rounded-xl font-semibold hover:bg-brand-900 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
       >
         {status === 'sending' ? 'Verzenden...' : 'Verstuur bericht'}
       </button>

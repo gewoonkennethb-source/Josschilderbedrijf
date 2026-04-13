@@ -17,10 +17,10 @@ export default function ReviewsPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+      <section className="bg-gradient-to-br from-brand-900 via-brand-800 to-brand-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-          <h1 className="text-3xl sm:text-4xl font-bold">Reviews & ervaringen</h1>
-          <p className="mt-3 text-blue-200 text-lg max-w-2xl">
+          <h1 className="text-3xl sm:text-4xl font-serif">Reviews & ervaringen</h1>
+          <p className="mt-3 text-brand-100 text-lg max-w-2xl">
             Lees wat onze klanten over ons zeggen. Wij zijn trots op onze beoordeling.
           </p>
         </div>
@@ -28,7 +28,7 @@ export default function ReviewsPage() {
 
       {/* Beoordeling overzicht */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-        <div className="text-center mb-12">
+        <div className="mb-12">
           <div className="inline-flex flex-col items-center">
             <p className="text-6xl font-bold text-slate-900">{COMPANY.reviews.score}</p>
             <div className="flex gap-1 mt-2">
@@ -58,7 +58,7 @@ export default function ReviewsPage() {
 
         {/* Meer reviews */}
         <div className="text-center mt-12 bg-white rounded-2xl border border-slate-200 p-8 max-w-2xl mx-auto">
-          <h2 className="text-xl font-bold text-slate-900 mb-2">
+          <h2 className="text-xl font-serif font-bold text-slate-900 mb-2">
             Bekijk al onze reviews
           </h2>
           <p className="text-slate-600 text-sm mb-4">
@@ -71,18 +71,18 @@ export default function ReviewsPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-blue-800">
+      <section className="bg-brand-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 text-center text-white">
-          <h2 className="text-2xl sm:text-3xl font-bold">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold">
             Overtuigd? Neem contact op
           </h2>
-          <p className="mt-3 text-blue-200 max-w-xl mx-auto">
+          <p className="mt-3 text-brand-100 max-w-xl mx-auto">
             Vraag vandaag nog een vrijblijvende offerte aan en ervaar zelf onze kwaliteit.
           </p>
           <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center bg-white text-blue-900 px-6 py-3 rounded-xl font-semibold hover:bg-blue-50 transition-colors"
+              className="inline-flex items-center justify-center bg-white text-brand-900 px-6 py-3 rounded-xl font-semibold hover:bg-brand-50 transition-colors"
             >
               Offerte aanvragen
             </Link>

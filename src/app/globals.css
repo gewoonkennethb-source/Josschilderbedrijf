@@ -2,4 +2,23 @@
 
 @theme inline {
   --font-sans: var(--font-inter);
+  --font-serif: var(--font-dm-serif);
+  --color-brand-900: #14291E;
+  --color-brand-800: #1B4332;
+  --color-brand-700: #245738;
+  --color-brand-600: #2D6A4F;
+  --color-brand-500: #40916C;
+  --color-brand-100: #D8F3DC;
+  --color-brand-50: #F0FFF4;
+}
+
+/* Focus-visible for keyboard accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-brand-600);
+  outline-offset: 2px;
+}
+
+/* Remove default outline only when using mouse */
+*:focus:not(:focus-visible) {
+  outline: none;
 }

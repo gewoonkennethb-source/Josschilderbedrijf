@@ -16,10 +16,10 @@ export default function OverOnsPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+      <section className="bg-gradient-to-br from-brand-900 via-brand-800 to-brand-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-          <h1 className="text-3xl sm:text-4xl font-bold">Over ons</h1>
-          <p className="mt-3 text-blue-200 text-lg max-w-2xl">
+          <h1 className="text-3xl sm:text-4xl font-serif">Over ons</h1>
+          <p className="mt-3 text-brand-100 text-lg max-w-2xl">
             Vakmanschap, betrouwbaarheid en persoonlijke aandacht — daar staan wij voor.
           </p>
         </div>
@@ -29,7 +29,7 @@ export default function OverOnsPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2 space-y-6">
-            <h2 className="text-2xl font-bold text-slate-900">
+            <h2 className="text-2xl font-serif font-bold text-slate-900">
               Uw schilder in Kampen
             </h2>
             <p className="text-slate-600 leading-relaxed">
@@ -101,7 +101,7 @@ export default function OverOnsPage() {
                 <div>
                   <dt className="text-slate-500">Telefoon</dt>
                   <dd>
-                    <a href={COMPANY.phoneHref} className="font-medium text-blue-800 hover:underline">
+                    <a href={COMPANY.phoneHref} className="font-medium text-brand-800 hover:underline">
                       {COMPANY.phone}
                     </a>
                   </dd>
@@ -114,14 +114,14 @@ export default function OverOnsPage() {
               <GoogleReviewBadge />
             </div>
 
-            <div className="bg-blue-800 rounded-2xl p-6 text-white">
+            <div className="bg-brand-800 rounded-2xl p-6 text-white">
               <h3 className="font-bold mb-2">Offerte nodig?</h3>
-              <p className="text-blue-200 text-sm mb-4">
+              <p className="text-brand-100 text-sm mb-4">
                 Neem vrijblijvend contact op voor een offerte op maat.
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center w-full bg-white text-blue-900 px-4 py-2.5 rounded-xl text-sm font-semibold hover:bg-blue-50 transition-colors"
+                className="inline-flex items-center justify-center w-full bg-white text-brand-900 px-4 py-2.5 rounded-xl text-sm font-semibold hover:bg-brand-50 transition-colors"
               >
                 Contact opnemen
               </Link>

@@ -31,7 +31,7 @@ export default function Header() {
                 href={item.href}
                 className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                   pathname === item.href
-                    ? 'text-blue-800 bg-blue-50'
+                    ? 'text-brand-800 bg-brand-50'
                     : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
                 }`}
               >
@@ -40,7 +40,7 @@ export default function Header() {
             ))}
             <a
               href={COMPANY.phoneHref}
-              className="ml-3 inline-flex items-center gap-2 bg-blue-800 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-900 transition-colors"
+              className="ml-3 inline-flex items-center gap-2 bg-brand-800 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-brand-900 transition-colors"
             >
               <PhoneIcon />
               {COMPANY.phone}
@@ -68,7 +68,7 @@ export default function Header() {
                 onClick={() => setMobileOpen(false)}
                 className={`block px-3 py-2.5 rounded-lg text-sm font-medium ${
                   pathname === item.href
-                    ? 'text-blue-800 bg-blue-50'
+                    ? 'text-brand-800 bg-brand-50'
                     : 'text-slate-600 hover:bg-slate-50'
                 }`}
               >
@@ -77,7 +77,7 @@ export default function Header() {
             ))}
             <a
               href={COMPANY.phoneHref}
-              className="mt-2 flex items-center justify-center gap-2 bg-blue-800 text-white px-4 py-2.5 rounded-lg text-sm font-semibold"
+              className="mt-2 flex items-center justify-center gap-2 bg-brand-800 text-white px-4 py-2.5 rounded-lg text-sm font-semibold"
             >
               <PhoneIcon />
               {COMPANY.phone}
